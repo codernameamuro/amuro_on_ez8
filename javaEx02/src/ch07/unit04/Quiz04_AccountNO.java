@@ -41,16 +41,21 @@ class Bank{
 		int no = Integer.parseInt(s2)+1;
 		accountNO = s1 + String.format("%07d", no);
 		*/
-		int [] ss;
+		/*
+		String s = "020-08-0000170";
+		String [] ss = s.split("-");
 		
-		accountNO.split("-");
+		for(String a : ss) {
+			System.out.println(a);
+			
+		}
 		int n = Integer.parseInt("-");
 		for (int i=1; i<=0; i++) {
 			
 		}
 		
 		
-		
+		*/
 		
 		
 		return accountNO;
