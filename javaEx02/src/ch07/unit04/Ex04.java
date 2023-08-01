@@ -18,19 +18,22 @@ public class Ex04 {
 		Scanner sc = new Scanner (System.in);
 		String name;
 		int count=0;
-		/*
+		
 		
 		do {
 			System.out.println("이름?");
 			name=sc.next();
-		} while(name.equalsIgnoreCase("end"));
-		if(name.startsWith("김")) {
-			count++;
-		}
+			if(name.startsWith("김")) {
+				count++;
+			}
+				
+		} while(!name.equalsIgnoreCase("end"));
+		
+		
 	
 		System.out.println("김씨:"+count);
-		*/
 		
+		/*
 		while(true) {
 			System.out.println("이름?");
 			name=sc.next();
@@ -44,7 +47,7 @@ public class Ex04 {
 		
 		System.out.println("김씨:"+count);
 		
-		
+		*/
 		sc.close();
 		
 		

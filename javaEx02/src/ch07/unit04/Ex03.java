@@ -18,7 +18,7 @@ public class Ex03 {
 		// substring(s,e) : s인덱스에서 e-1인덱스까지 문자열 추출 (e-s 개 추출)
 		System.out.println(s2); // kor 특정 위치 문자열
 		
-		// 6번째 인덱습터 끝까지 ? 
+		// 6번째 인덱스부터 끝까지 ? 
 		s2 = s1.substring(6);
 		System.out.println(s2); // korea 특정 위치에서 끝까지 
 		
