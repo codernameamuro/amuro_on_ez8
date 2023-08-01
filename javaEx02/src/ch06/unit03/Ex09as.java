@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ex09as {
 	public static void main(String[] args) {
 	    Scanner sc = new Scanner(System.in);
-		Test9 t = new Test9();
+		Test99 t = new Test99();
 		int blank;
 		
 		
@@ -99,7 +99,7 @@ public class Ex09as {
 
 }
 
-class Test9{
+class Test99{
 	
 	// 1~100 사이의 난수 10개 발생
 	public int[] random() {
