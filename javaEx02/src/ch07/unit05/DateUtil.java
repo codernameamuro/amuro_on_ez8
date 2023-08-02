@@ -40,9 +40,39 @@ public class DateUtil {
 		
 		return result;
 	}
+	/**
+	 * 생년월일을 이용하여 나이 계산
+	 * @param birth   생년월일
+	 * @return        나이
+	 */
 	
-	
-	
+	public int toAge(String birth) {
+		int result = -1;
+		
+		if(! isValidDate(birth)) {
+			return result;
+		}
+		
+		Calendar cal = Calendar.getInstance();
+		int current_year = cal.get(Calendar.YEAR);
+		int current_month = cal.get(Calendar.MONTH)+1;
+		int current_date=cal.get(Calendar.DATE);
+		
+		birth=birth.replaceAll("(\\/|\\.|\\-)", "");
+		int y = Integer.parseInt(birth.substring(0,4));
+		int m = Integer.parseInt(birth.substring(4,6));
+		int d = Integer.parseInt(birth.substring(6));
+		
+		result = current_year - y;
+		if(m> current_month || (m==current_month && d > current_date)) {
+			result--;
+			
+		}
+		
+		
+		
+		return result;
+	}
 	
 	
 	

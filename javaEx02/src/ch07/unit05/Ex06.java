@@ -15,8 +15,12 @@ public class Ex06 {
 			System.out.print("생년월일?");
 			birth=sc.next();
 		} while (!util.isValidDate(birth));
+		
+		age=util.toAge(birth);
 
 		System.out.println("생년월일: " + birth);
+		System.out.println("나이: "+ age);
+		
 
 		sc.close();
 
