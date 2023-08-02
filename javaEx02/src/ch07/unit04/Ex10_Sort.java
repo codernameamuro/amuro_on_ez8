@@ -31,8 +31,8 @@ public class Ex10_Sort {
 		for (int i = 1; flag; i++) {
 			flag = false;
 
-			for (int j = 0; j < ss.length-i; j++) {		
-				if (ss[j].compareTo(ss[j+1]) > 0) {
+			for (int j = 0; j < ss.length - i; j++) {
+				if (ss[j].compareTo(ss[j + 1]) > 0) {
 					// compareTo() : 사전식 비교, 코드 차이
 					t = ss[j];
 					ss[j] = ss[j + 1];
