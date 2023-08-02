@@ -30,7 +30,12 @@ public class Ex01_Calendar {
 		s = String.format("%tF %tA %tT", cal,cal,cal);
 		System.out.println(s);
 		
-		
+		// 2023년 8월 33일로 변경
+		cal.set(Calendar.YEAR, 2023);
+		cal.set(Calendar.MONTH, 8-1);
+		cal.set(Calendar.DATE, 33);
+		s = String.format("%tF %tA ", cal,cal);
+		System.out.println(s);  // 자동으로 날짜가 밀어짐
 		
 		
 	}
