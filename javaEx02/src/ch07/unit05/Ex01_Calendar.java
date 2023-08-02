@@ -37,6 +37,19 @@ public class Ex01_Calendar {
 		s = String.format("%tF %tA ", cal,cal);
 		System.out.println(s);  // 자동으로 날짜가 밀어짐
 		
+		// 전태희씨가 2023-07-01 여자친구를 만남 100일 후는? 
+		cal.set(2023, 7-1, 101);
+		s = String.format("%tF %tA %tT", cal,cal,cal);
+		System.out.println(s);
+		
+		// cal.add(Calendar.DATE, 100); 도 가능
+		
+		// 1970 - 01 - 01  00:00:00를 기준으로 밀리초 단위로 환산하여 변환
+		Calendar now = Calendar.getInstance();	
+		long t = now.getTimeInMillis();
+		
+		System.out.println(t);
+		
 		
 	}
 
