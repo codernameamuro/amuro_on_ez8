@@ -3,12 +3,12 @@ package ch07.unit04;
 public class Ex13_StringBuilder {
 
 	public static void main(String[] args) {
-		StringBuilder sb1 = new StringBuilder("seoul"); //false
-		StringBuilder sb2 = new StringBuilder("seoul"); //false
+		StringBuilder sb1 = new StringBuilder("seoul"); 
+		StringBuilder sb2 = new StringBuilder("seoul");  
 		
 		
-		System.out.println(sb1==sb2);
-		System.out.println(sb1.equals(sb2));
+		System.out.println(sb1==sb2); //false  
+		System.out.println(sb1.equals(sb2)); //false
 		
 		// 문자열 비교 => String 변환 후 비교
 		System.out.println(sb1.toString().equals(sb2.toString())); //true
