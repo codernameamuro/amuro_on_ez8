@@ -7,7 +7,10 @@ import java.time.temporal.ChronoUnit;
 public class Ex08_Util {
 
 	public static void main(String[] args) {
-		
+		String s1,s2;
+		s1="2023-05-06";
+		s2="2023-09-08";
+		System.out.printf("%s~%s 일자 차이 : %d\n", s1, s2, todiffDays(s1, s2));
 
 	}
 	
@@ -22,7 +25,7 @@ public class Ex08_Util {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd");
 		
 		LocalDate beginDate = LocalDate.parse(start,dtf);
-		LocalDate endDate = LocalDate.parse(start,dtf);
+		LocalDate endDate = LocalDate.parse(end,dtf);
 		
 		result = beginDate.until(endDate, ChronoUnit.DAYS);
 		
