@@ -47,7 +47,7 @@ public class ScoreUI { // 모바일, 웹 페이지에 출력
 		System.out.println("\n데이터 입력...");
 
 		ScoreVO vo = new ScoreVO(); // input 위에 두면 한 명 밖에 저장을 못한다.
-		
+
 		System.out.print("학번 ?");
 		vo.setHak(sc.next());
 
@@ -65,13 +65,12 @@ public class ScoreUI { // 모바일, 웹 페이지에 출력
 
 		// 배열에 저장
 		int count = ss.append(vo);
-		
 
-		System.out.println("등록 완료 : 전체 인원수 -" + count);
+		System.out.println("등록 완료 : 전체 인원수 =" + count);
 		System.out.println();
 
 	}
-	
+
 	public void update() {
 		System.out.println("\n데이터 수정...");
 	}
@@ -80,48 +79,66 @@ public class ScoreUI { // 모바일, 웹 페이지에 출력
 		System.out.println("\n데이터 삭제...");
 	}
 
-	public void findbyHak() {
-		System.out.println("\n학번 검색...");
+	public void findbyHak() { // 학번을 찍으면 나오게 끔 없으면 등록된 학번이 아닙니다
+		String haknum;
+
+		ScoreVO[] list = ss.getList();
+		int count = ss.getCount();
+		System.out.println("검색할 학번을 입력하세요");
+		haknum=sc.next();
+		for (int i = 0; i < count; i++) {
+			ScoreVO vo = list[i];
+			if(haknum.matches(vo.getHak())) {
+				System.out.print(vo.getName() + "\t");
+				System.out.print(vo.getKor() + "\t");
+				System.out.print(vo.getEng() + "\t");
+				System.out.print(vo.getMath() + "\t");
+			}else {
+				System.out.println("해당 학번이 없습니다.");
+			}
+			System.out.println();
+			
+
+		}
+
 	}
 
 	public void print() {
 		System.out.println("\n전체 리스트...");
-		
+
 		ScoreVO[] list = ss.getList();
 		int count = ss.getCount();
-		
-		for(int i=0; i<count; i++) {	
-		ScoreVO vo = list[i];
-		
-			System.out.print(vo.getHak()+"\t");
-			System.out.print(vo.getName()+"\t");
-			System.out.print(vo.getKor()+"\t");
-			System.out.print(vo.getEng()+"\t");
-			System.out.print(vo.getMath()+"\t");
-			System.out.print(vo.getTot()+"\t");
+
+		for (int i = 0; i < count; i++) {
+			ScoreVO vo = list[i];
+
+			System.out.print(vo.getHak() + "\t");
+			System.out.print(vo.getName() + "\t");
+			System.out.print(vo.getKor() + "\t");
+			System.out.print(vo.getEng() + "\t");
+			System.out.print(vo.getMath() + "\t");
+			System.out.print(vo.getTot() + "\t");
 			System.out.println(vo.getAve());
-			
+
 		}
 		System.out.println();
-		
+
 	}
 
 	public void printGrade() {
 		System.out.println("\n평점 리스트...");
-		
+
 		ScoreVO[] list = ss.getList();
 		int count = ss.getCount();
-		for(int i = 0; i<count; i++) {
+		for (int i = 0; i < count; i++) {
 			ScoreVO vo = list[i];
-			
-			System.out.print(vo.getHak()+"\t");
-			System.out.print(vo.getName()+"\t");
-			System.out.print(ss.grade(vo.getKor())+"\t");
-			System.out.print(ss.grade(vo.getEng())+"\t");
+
+			System.out.print(vo.getHak() + "\t");
+			System.out.print(vo.getName() + "\t");
+			System.out.print(ss.grade(vo.getKor()) + "\t");
+			System.out.print(ss.grade(vo.getEng()) + "\t");
 			System.out.println(ss.grade(vo.getMath()));
-			
-	
-			
+
 		}
 		System.out.println();
 	}

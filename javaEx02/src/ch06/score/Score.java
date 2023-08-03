@@ -27,7 +27,7 @@ public class Score { // 데이터를 보관하는 곳
 		return list;
 	}
 
-	// 한 번 조건에 일치하는 ScoreVO 객체 반환
+	// 한 번 조건에 일치하는 ScoreVO 객체 반환                //학번 나오게 끔 코딩 
 	public ScoreVO readScore(String hak) {
 		ScoreVO vo = null;
 
