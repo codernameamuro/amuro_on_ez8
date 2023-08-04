@@ -1,4 +1,4 @@
-package ch06.score;
+package ch06.score2;
 
 public class App {
 
@@ -7,5 +7,7 @@ public class App {
 		// ui.menu();
 		
 		new ScoreUI().menu();
+
 	}
+
 }
