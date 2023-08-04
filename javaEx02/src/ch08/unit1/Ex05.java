@@ -3,7 +3,8 @@ package ch08.unit1;
 public class Ex05 {
 
 	public static void main(String[] args) {
-		
+		Demo5 d = new Demo5(100);
+		d.disp();
 
 	}
 
@@ -48,7 +49,7 @@ class Demo5 extends Test5{
 	public Demo5(int a, int x) {
 		super(x);
 		this.a=a;
-		System.out.println("하위 인자 둘이 생성자");
+		System.out.println("하위 인자 둘인 생성자");
 	}
 	
 	public void disp() {
