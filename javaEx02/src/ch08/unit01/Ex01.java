@@ -1,4 +1,4 @@
-package ch08.unit1;
+package ch08.unit01;
 
 public class Ex01 {
 
