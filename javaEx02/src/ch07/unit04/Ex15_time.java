@@ -40,7 +40,7 @@ class Test15 {
 		
 		StringBuffer sb = new StringBuffer("a");
 		for(int i = 1; i<100000; i++) {
-			sb.append("a"); // 성능이 매우 나쁨 
+			sb.append("a"); 
 		}
 		
 		long end = System.currentTimeMillis();
@@ -56,7 +56,7 @@ class Test15 {
 		
 		StringBuilder sb = new StringBuilder("a");
 		for(int i = 1; i<100000; i++) {
-			sb.append("a"); // 성능이 매우 나쁨 
+			sb.append("a"); 
 		}
 		
 		long end = System.currentTimeMillis();

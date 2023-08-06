@@ -11,7 +11,7 @@ public class Ex04 {
 		System.out.println(now+"\n");
 		
 		LocalDateTime ldt;
-		ldt = now.with(TemporalAdjusters.lastDayOfYear());
+		ldt = now.with(TemporalAdjusters.lastDayOfMonth());
 		System.out.println("이번달의마지막일자:"+ldt);
 		System.out.println(ldt.getDayOfMonth());
 		System.out.println();
