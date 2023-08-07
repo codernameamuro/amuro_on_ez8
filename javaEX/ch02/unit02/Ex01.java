@@ -1,4 +1,4 @@
-package ch02.unit02;
+/*package ch02.unit02;
 
 public class Ex01 {
 
@@ -32,4 +32,4 @@ public class Ex01 {
 
 		}
 	}
-
+*/
