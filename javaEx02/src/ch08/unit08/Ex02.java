@@ -39,8 +39,8 @@ enum City{
 	public int getCount() {
 		return count;
 	}
-	@Override
+	// @Override
 	public String toString() {
-		return this.name + "인구 : "+ count + "민명";
+		return this.name + "인구 : "+ count + "만명";
 	}
 }

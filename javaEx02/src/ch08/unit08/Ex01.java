@@ -36,7 +36,7 @@ public class Ex01 {
 }
 
 enum Color {
-	RED, GREEN, BLUE
+	RED, BLUE, GREEN;
 }
 
 class Test1 {

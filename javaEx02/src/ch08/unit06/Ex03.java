@@ -18,18 +18,13 @@ interface Demo3{
 }
 
 
-// 추상클래스는 인터페이스의 모든 메소드를 구혆지 않아도 된다.
+// 추상클래스는 인터페이스의 모든 메소드를 구현히지 않아도 된다.
 abstract class DemoImpl3 implements Demo3{
-	@Override
 	public void print() {
-		System.out.println("print...");		
-	}
-	@Override
-	public void disp() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("print...");
 	}
 }
+
 
 class Test3 extends DemoImpl3{
 

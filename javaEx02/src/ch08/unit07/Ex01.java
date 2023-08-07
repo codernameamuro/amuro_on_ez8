@@ -3,7 +3,7 @@ package ch08.unit07;
 public class Ex01 {
 
 	public static void main(String[] args) {
-		// User1 obj = new User1(); // 컴오류
+		 //User1 obj = new User1(); // 컴오류
 		
 		// 외부에서 static 중첩 클래스 객체 생성
 		Test1.User1 obj = new Test1.User1();

@@ -20,7 +20,7 @@ public class Ex01_interface {
 		((DemoImpl1)dd).sub(); // down-casting
 		
 		System.out.println(Demo1.A);
-		
+		System.out.println(Demo1.B);
 		// Demo1.B = 50; // 컴파일 오류 final 변수는 값 변경 불가 
 	}
 

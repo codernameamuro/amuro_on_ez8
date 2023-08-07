@@ -28,7 +28,7 @@ class Test2{
 		public void write() {
 			System.out.println(a+","+b+","+x);
 			
-			// print();
+			//print();
 		}
 	}
 	
