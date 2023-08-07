@@ -32,10 +32,12 @@ class Test2{
 }
 
 class Demo2 extends Test2{
+	
+	
 	public void write(double result) {
 		System.out.println("반지름 : "+r+" 넓이 : " + result);
-		// System.out.println("반지름 : "+this.r+" 넓이 : " + result);
-		// System.out.println("반지름 : "+super.r+" 넓이 : " + result); // 셋 다 동일함
+	    System.out.println("반지름 : "+this.r+" 넓이 : " + result);
+	    System.out.println("반지름 : "+super.r+" 넓이 : " + result); 
 		
 	}
 	
