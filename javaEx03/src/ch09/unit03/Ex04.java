@@ -24,7 +24,7 @@ public class Ex04 {
 			c = a / b;
 			System.out.println(a + "/" + b + "=" + c);
 			
-			//예외 상황별로 예외를 catch
+			// 모든 예외 상황별로 예외를 catch
 		} catch (IOException e) { // checked exception 
 
 			e.printStackTrace(); // 에러 메시지를 표준 출력 장치로 출력
