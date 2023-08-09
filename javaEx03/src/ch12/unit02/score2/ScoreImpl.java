@@ -7,7 +7,10 @@ public class ScoreImpl implements Score {
 	private List<ScoreVO> list = new ArrayList<ScoreVO>();
 
 	@Override
-	public void insertScore(ScoreVO vo) {
+	public void insertScore(ScoreVO vo) throws MyDuplicationException {
+		if(readScore(vo.getHak())!=null) { // 동일한 학번이 존재한다
+			throw new MyDuplicationException("등록된 학번입니다");
+		}
 		list.add(vo);
 
 	}

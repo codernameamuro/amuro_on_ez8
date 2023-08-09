@@ -46,5 +46,11 @@ public class ScoreVO { // 하나당 한 명의 정보가 저장 됨
 	public int getAve() {
 		return getTot()/3;
 	}
+	@Override
+		public String toString() {
+			String s = hak+"\t"+name+"\t"+kor+"\t"+eng+"\t"+mat+"\t"+getTot()+"\t"+getAve();
+			
+			return s;
+		}
 	
 }

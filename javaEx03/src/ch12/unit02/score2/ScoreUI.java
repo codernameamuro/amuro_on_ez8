@@ -1,6 +1,7 @@
 package ch12.unit02.score2;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
@@ -40,7 +41,25 @@ public class ScoreUI {
 		}
 
 	}
-
+	private int inputScore() throws ScoreException{
+		int s = 0;
+		
+		try {
+			s=Integer.parseInt(br.readLine());
+			if(s<0 || s>100) {
+				throw new ScoreException("점수는 0~100 사이 입니다.");
+			}
+			
+		} catch (ScoreException e) {
+			throw e;
+		} catch (IOException e) {
+			e.printStackTrace();
+			
+		}
+		
+		
+		return s;
+	}
 	public void insert() {
 		System.out.println("\n학생 정보 등록...");
 		
@@ -51,19 +70,22 @@ public class ScoreUI {
 			System.out.println("이름 ?");
 			vo.setName(br.readLine());
 			
-			// br.readLine() : String 
-			// Integer.parseInt : Sting -> Integer
+		
 			System.out.println("국어 ?");
-			vo.setKor(Integer.parseInt(br.readLine()));
+			vo.setKor(inputScore());
 			System.out.println("영어 ?");
-			vo.setEng(Integer.parseInt(br.readLine()));
+			vo.setEng(inputScore());
 			System.out.println("수학 ?");
-			vo.setMat(Integer.parseInt(br.readLine()));
+			vo.setMat(inputScore());
 			
 			score.insertScore(vo); // ArrayList에 저장
 			
 			System.out.println("등록 완료...");
 			
+		} catch (MyDuplicationException e) {	
+			System.out.println("등록된 학번입니다");
+		} catch (ScoreException e) {
+			System.out.println(e.getMessage());
 		} catch (NumberFormatException e) {
 			System.out.println("점수는 숫자만 입력 가능합니다");
 		} catch (Exception e) {
@@ -90,18 +112,20 @@ public class ScoreUI {
 			vo.setName(br.readLine());
 			
 			System.out.println("국어?");
-			vo.setKor(Integer.parseInt(br.readLine()));
+			vo.setKor(inputScore());
 			
 			System.out.println("영어?");
-			vo.setEng(Integer.parseInt(br.readLine()));
+			vo.setEng(inputScore());
 			
 			System.out.println("수학?");
-			vo.setMat(Integer.parseInt(br.readLine()));
+			vo.setMat(inputScore());
 			
 			System.out.println("수정 완료...");
 			
 		} catch (NumberFormatException e) {
 			System.out.println("숫자만 가능합니다");
+		} catch (ScoreException e) {
+			System.out.println(e.getMessage());
 			
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -146,16 +170,9 @@ public class ScoreUI {
 		System.out.println("등록된 인원 :"+ list.size());
 		System.out.println("학번\t이름\t국어\t영어\t수학\t총점\t평균");
 		for(ScoreVO vo : list) {
-			
-			System.out.print(vo.getHak()+ "\t");
-			System.out.print(vo.getName()+ "\t");
-			System.out.print(vo.getKor()+ "\t");
-			System.out.print(vo.getEng()+ "\t");
-			System.out.print(vo.getMat()+ "\t");
-			System.out.print(vo.getTot()+ "\t");
-			System.out.println(vo.getAve());
-		
-			
+			// ScoreVO 클래스에 toString()을 재정의 했으므로
+			System.out.println(vo);
+
 		}
 		System.out.println();
 
@@ -204,14 +221,7 @@ public class ScoreUI {
 				return;
 			}
 			for(ScoreVO vo : listName) {
-				
-				System.out.print(vo.getHak()+ "\t");
-				System.out.print(vo.getName()+ "\t");
-				System.out.print(vo.getKor()+ "\t");
-				System.out.print(vo.getEng()+ "\t");
-				System.out.print(vo.getMat()+ "\t");
-				System.out.print(vo.getTot()+ "\t");
-				System.out.print(vo.getAve());
+				System.out.println(vo);
 				
 			}
 			System.out.println();
