@@ -20,7 +20,7 @@ public class Ex02 {
 		System.out.println("-------------");
 		obj.print();
 		System.out.println("-------------");
-		// obj.set(5); 컴오류 / 제너릭에 의존성을 갖고 있음 ? 자료형이 결정되지 않았음
+		// obj.set(5); 컴오류 / 제너릭에 의존성을 갖고 있음     ? 자료형이 결정되지 않았음
 	}
 
 }

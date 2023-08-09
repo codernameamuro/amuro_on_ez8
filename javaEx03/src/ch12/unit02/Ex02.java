@@ -3,8 +3,9 @@ package ch12.unit02;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
-public class Ex {
+public class Ex02 {
 
 	public static void main(String[] args) {
 		List<String> list = new ArrayList<String>();
@@ -33,7 +34,7 @@ public class Ex {
 		System.out.println("\n");
 		
 		
-		
+		// Iterator : 순방향과 검색이 가능
 		System.out.println("전체출력 ---3 : 반복자");
 		Iterator<String> it = list.iterator();
 		while(it.hasNext()) { // 데이터 있으면 true, 없으면 false
@@ -45,6 +46,16 @@ public class Ex {
 		System.out.println("전체 역순 출력 ---1");
 		for(int i = list.size()-1; i>=0; i--) {
 			System.out.print(list.get(i)+" ");
+		}
+		System.out.println("\n");
+		
+		// ListIterator : 순방향과 역방향 검색이 모두 가능
+		System.out.println("전체 역순 출력 ---2");
+		ListIterator<String> it2 = list.listIterator(list.size());
+		                           // 반복자의 위치를 가장 마지막으로 이동
+		while(it2.hasPrevious()) {
+			String s = it2.previous();
+			System.out.print(s+" ");
 		}
 		System.out.println("\n");
 
