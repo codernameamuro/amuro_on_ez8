@@ -11,7 +11,7 @@ public class Ex03 {
 		// 수?
 		Scanner sc = new Scanner(System.in);
 
-		Random rnd = new Random();
+		//Random rnd = new Random();
 		// int num = rnd.nextInt(100)+1 로도 가능
 		int n;
 		int num;
