@@ -4,7 +4,21 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
-
+/*
+ - Map
+ : 키, 값 구조
+ : 카는 중복 허용하지 않음
+ : 키는 순서가 없음
+ : 중복될 경우 마지막에 온 값이 기존 값을 덮음
+ : 값은 바꿀 수 있지만 키는 바꿀 수 없음 
+ : 키를 바꾸고 싶은 경우 삭제후 다시 등록
+ : 값을 변경하는 방법 replace(키,값)으로 변경 가능
+ - 구현 클래스
+ : HashMap - 동기화 되지 않음
+ : Hashtable - 동기화 지원
+ : LinkedHashMap - 키가 등록된 순서 유지
+ : TreeMap - 키 순서로 정렬, 키는 Comparable 인터페이스가 구현되어 있어야 함 
+ */
 public class Ex01_Map {
 
 	public static void main(String[] args) {
