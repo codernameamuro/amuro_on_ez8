@@ -1,4 +1,4 @@
-package Subway;
+package subway;
 
 public class UserVO {
 	
