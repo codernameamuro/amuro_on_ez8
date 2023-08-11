@@ -1,4 +1,4 @@
-package bank;
+package bank_02;
 
 // 입출금 관리 클래스
 public class BankMoney {

@@ -1,4 +1,4 @@
-package bank;
+package bank_02;
 
 // 잔고 부족 예외
 public class BalanceException extends Exception {

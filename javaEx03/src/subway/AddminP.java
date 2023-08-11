@@ -19,11 +19,11 @@ public class AddminP {
 	public int people() {
 		
 		int h = dateTime.getHour();
-		if(h>06 && h<12) {
+		if(h>=06 && h<=12) {
 			System.out.println("2명입니다");
-		}else if(h>13 && h<18) {
+		}else if(h>=13 && h<=18) {
 			System.out.println("4명입니다");
-		}else if(h>19 && h<21) {
+		}else if(h>=19 && h<=21) {
 			System.out.println("3명입니다");
 		}else {
 			System.out.println("0 명, 영업이 종료됐습니다");
