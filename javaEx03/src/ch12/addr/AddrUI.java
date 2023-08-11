@@ -75,16 +75,20 @@ public class AddrUI {
 	public void update() {
 		System.out.println("\n 정보 수정...");
 		String name;
+		String tel;
 		
 		try {
-			System.out.println("수정할 이름?");
+			System.out.println("검색할 이름?");
 			name=br.readLine();
-			
-			AddrVO vo = addr.readAddress(name);
+			System.out.println("검색할 전화번호");
+			tel=br.readLine();
+			AddrVO vo = addr.readAddress(name, tel);
 			if(vo==null) {
-				System.out.println("등록된 이름이 아닙니다");
+				System.out.println("등록된 정보가 아닙니다");
 				return;
 			}
+			System.out.println("수정할 이름?");
+			vo.setName(br.readLine());
 			
 			System.out.println("수정할 전화번호 ?");
 			vo.setTel(br.readLine());
@@ -141,11 +145,14 @@ public class AddrUI {
 	public void findbyName() {
 		System.out.println("\n 이름 검색...");
 		String name;
+		String tel;
 		
 		try {
 			System.out.println("검색할 이름?");
 			name=br.readLine();
-			AddrVO vo = addr.readAddress(name);
+			System.out.println("검색할 전화번호?");
+			tel=br.readLine();
+			AddrVO vo = addr.readAddress(name, tel);
 			System.out.print(vo.getName()+"\t");
 			System.out.print(vo.getTel()+"\t");
 			System.out.print(vo.getBirht()+"\t");
@@ -155,7 +162,7 @@ public class AddrUI {
 			
 			System.out.println();
 		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println("등록되지 않은 정보입니다");
 		}
 	}
 

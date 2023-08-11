@@ -7,7 +7,7 @@ public class AddrImpl implements Addr{
 	private List<AddrVO> list = new ArrayList<AddrVO>();
 	@Override
 	public void insertAddress(AddrVO vo) throws MyDuplicationException{
-		if(readAddress(vo.getName())!=null){
+		if(readAddress(vo.getName(), vo.getTel())!=null){
 			throw new MyDuplicationException("등록된 정보가 아닙니다");
 			
 			
@@ -23,9 +23,9 @@ public class AddrImpl implements Addr{
 	}
 
 	@Override
-	public AddrVO readAddress(String name) {
+	public AddrVO readAddress(String name, String tel){
 		for(AddrVO vo : list) {
-			if(vo.getName().equals(name)) {
+			if(vo.getName().equals(name) && vo.getTel().equals(tel)) {
 				return vo;
 				
 			}
@@ -36,7 +36,7 @@ public class AddrImpl implements Addr{
 
 	@Override
 	public boolean deleteAddr(String name) {
-		AddrVO vo = readAddress(name);
+		AddrVO vo = readname(name);
 		if(vo==null) {
 			return false;
 			
@@ -57,6 +57,19 @@ public class AddrImpl implements Addr{
 		}
 		return listname;
 	}
+
+	@Override
+	public AddrVO readname(String name) {
+		
+		for(AddrVO vo : list) {
+			if(vo.getName().equals(name)) {
+				return vo;
+			}
+		}
+		return null;
+	}
+	
+
 
 
 
