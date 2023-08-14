@@ -39,12 +39,12 @@ public interface Sandwich {
 	public void payOreder(String pay);
 	
 	// 번호표
-	public int lineNumber();
+	public int setLineNumber();
 	/////////////////////////////////////// 
 	
 	/////////////////////////////////////
 	// 재고 리스트
-	public List<String> showInven();
+	public List<UserVO> showInven();
 	
 	// 난수 생성해서 무작위로 출력
 	public int people();

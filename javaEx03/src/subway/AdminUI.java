@@ -7,7 +7,10 @@ import java.io.InputStreamReader;
 public class AdminUI {
 	private BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	private MainUI main = new MainUI();
-	private AddminP p = new AddminP();
+	private Sandwich sand = new SandwichImpl();
+	private UserUI ui = new UserUI();
+	private UserVO vo = new UserVO();
+	private Guestcount gc= new Guestcount();
 		
 		
 
@@ -45,13 +48,12 @@ public class AdminUI {
 		
 	}
 	
-	
-	
 	private void HumMan() {
 		System.out.println("직원수 현황");
-		p.people();
+		sand.people();
 	}
 	private void Sales() {
-		//p.
+		System.out.println(gc.ui.count);
+		
 	}
 }

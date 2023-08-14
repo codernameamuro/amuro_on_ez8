@@ -11,7 +11,29 @@ public class UserVO {
 	private String setU;
 	private String setDrink;
 	private String pay;
+	private int count;
+	private int guest=0;
 	
+	public int getGuest() {
+		return guest;
+	}
+	public void setGuest(int guest) {
+		this.guest = guest;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
+	private int lineNubmer = 0;
+	
+	public int getLineNubmer() {
+		return lineNubmer;
+	}
+	public void setLineNubmer(int lineNubmer) {
+		this.lineNubmer = lineNubmer;
+	}
 	public String getBread() {
 		return bread;
 	}
@@ -67,9 +89,5 @@ public class UserVO {
 		this.pay = pay;
 	}
 
-
-	
-	
-	
 
 }
