@@ -64,7 +64,7 @@ public class DateUtil2 {
 			throw new IllegalArgumentException("Invalid date format(yyyyMMdd, yyyy-MM-dd): " + date);
 		}
 		
-		return result;
+		return result ;
 	}
 	
 	/**
