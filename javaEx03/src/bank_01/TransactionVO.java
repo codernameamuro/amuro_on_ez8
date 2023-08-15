@@ -1,4 +1,4 @@
-package bank_02;
+package bank_01;
 
 // 거래내역 정보
 public class TransactionVO {

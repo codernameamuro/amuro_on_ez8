@@ -1,4 +1,4 @@
-package bank_02;
+package bank_01;
 
 // 계좌가 존재하지 않는 경우 발생하는 예외
 public class AccountNotFoudException extends Exception {
