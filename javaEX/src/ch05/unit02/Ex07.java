@@ -25,7 +25,7 @@ public class Ex07 {
 
 		// 행렬의 곱
 		for (int i = 0; i < d.length; i++) {
-			for (int j = 0; j < c[i].length; j++) {
+			for (int j = 0; j <d[i].length; j++) {
 				for (int k = 0; k < 3; k++) {
 					d[i][j]+= a[i][k] * b[k][j];
 				}

@@ -1,6 +1,6 @@
 package ch11.unit02;
 
-public class Ex04 {
+public class Ex04_twotypeparameter {
 
 	public static void main(String[] args) {
 		Test4<String, Integer> obj = new Test4<>();

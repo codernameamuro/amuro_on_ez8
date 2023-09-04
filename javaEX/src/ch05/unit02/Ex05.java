@@ -27,7 +27,7 @@ public class Ex05 {
 			System.out.println();
 		}
 		System.out.println("4*5행렬...");
-		for(int i =0; i<a.length; i++) {
+		for(int i =0; i<b.length; i++) {
 			for(int j = 0; j<a[i].length; j++) {
 				System.out.printf("%4d", b[j][i]);
 			}

@@ -23,7 +23,7 @@ public class Ex02 {
 		
 		System.arraycopy(s1, 0, s2, 1, s1.length-1);
 		for(String s:s2) {
-			System.out.println(s+" ");        // null, "자바","서블릿", null, null, null
+			System.out.print(s+" ");        // null, "자바","서블릿", null, null, null
 		}
 		System.out.println();
 		

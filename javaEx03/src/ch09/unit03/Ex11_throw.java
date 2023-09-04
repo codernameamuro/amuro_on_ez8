@@ -1,6 +1,6 @@
 package ch09.unit03;
 
-public class Ex11 {
+public class Ex11_throw {
 
 	public static void main(String[] args) {
 		User11 obj = new User11();

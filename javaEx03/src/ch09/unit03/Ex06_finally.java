@@ -3,7 +3,7 @@ package ch09.unit03;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Ex06 {
+public class Ex06_finally {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

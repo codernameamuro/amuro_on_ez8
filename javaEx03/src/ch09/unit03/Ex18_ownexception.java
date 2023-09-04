@@ -2,7 +2,7 @@ package ch09.unit03;
 
 import java.util.Scanner;
 
-public class Ex18 {
+public class Ex18_ownexception {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

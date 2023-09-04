@@ -40,6 +40,18 @@ public class Ex07_Comparator { // 상황에 따라 정렬의 기준점을 잡을
 		Collections.sort(list,comp2);
 		disp("나이 오름차순...", list);
 		
+		Comparator<UserDTO> comp4 = new Comparator<UserDTO>() {
+			@Override
+			public int compare(UserDTO o1, UserDTO o2) {
+				
+				return o1.getAge()-o2.getAge();
+			}	
+			
+		};
+		Collections.sort(list,comp);
+		disp("나이 오름차순...", list);
+		
+		
 		
 		Comparator<UserDTO> comp3 = new Comparator<UserDTO>() {
 			

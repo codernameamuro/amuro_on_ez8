@@ -8,7 +8,7 @@ package ch11.unit02;
   : 객체의 타입을 컴파일할떄 체크하므로 객체 타입의 안전성을 높이고 
     불필요한 형 변환을 줄일 수 있다.
  */
-public class Ex03 {
+public class Ex03_generic {
 
 	public static void main(String[] args) {
 		Test3<String> t = new Test3<>(); // String으로 설정한 이상 String 외 다른 변수를 넣을 수 없다

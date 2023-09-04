@@ -42,7 +42,7 @@ class Test1 {
 	}
 
 	public void sub() {
-		// System.out.println(a); 컴오류라는데 왜 되지
+		System.out.println(a); //컴오류라는데 왜 되지
 		System.out.println(b);
 	}
 }

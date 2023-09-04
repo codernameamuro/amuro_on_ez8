@@ -1,6 +1,6 @@
 package ch09.unit03;
 
-public class Ex08 {
+public class Ex08_exit {
 
 	public static void main(String[] args) {
 		divide(10,5);

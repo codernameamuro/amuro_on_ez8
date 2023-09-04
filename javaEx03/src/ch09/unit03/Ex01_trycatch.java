@@ -2,7 +2,7 @@ package ch09.unit03;
 
 import java.util.Scanner;
 
-public class Ex01 {
+public class Ex01_trycatch {
 	public static void main(String[] args) {
 		//예외 처리를 하지 않았을 때 일어날 수 있는 비정상적인 상태
 		// b가 0이면 프로그램 비정상적으로 종료 

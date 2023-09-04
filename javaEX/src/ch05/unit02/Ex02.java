@@ -15,8 +15,7 @@ public class Ex02 {
 		System.out.println("2행 열수:"+a[2].length);
 		
 		System.out.println(a[0][3]); // 0
-		// System.out.println(a[1][3]); // 런타임오류
-		
+		//System.out.println(a[1][3]); // 런타임오류
 		
 		char c = 'A';
 		for(int i = 0; i<a.length; i++) {
